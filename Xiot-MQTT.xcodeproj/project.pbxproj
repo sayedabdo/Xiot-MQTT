@@ -13,6 +13,7 @@
 		169795AD20E3AF9400B65A45 /* Xiot_MQTT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 169795AB20E3AF9400B65A45 /* Xiot_MQTT.xcdatamodeld */; };
 		169795AF20E3AF9400B65A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169795AE20E3AF9400B65A45 /* Assets.xcassets */; };
 		169795B220E3AF9400B65A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169795B020E3AF9400B65A45 /* LaunchScreen.storyboard */; };
+		E3C0F2FE89F4E339A0A556DB /* Pods_Xiot_MQTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C886D9F9E0FC7D53F3A19423 /* Pods_Xiot_MQTT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		169795AE20E3AF9400B65A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		169795B120E3AF9400B65A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		169795B320E3AF9400B65A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A97EA6045038259A0BBCF7E /* Pods-Xiot-MQTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xiot-MQTT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Xiot-MQTT/Pods-Xiot-MQTT.debug.xcconfig"; sourceTree = "<group>"; };
+		C886D9F9E0FC7D53F3A19423 /* Pods_Xiot_MQTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xiot_MQTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB987B3D92415D0D4C504C0E /* Pods-Xiot-MQTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xiot-MQTT.release.xcconfig"; path = "Pods/Target Support Files/Pods-Xiot-MQTT/Pods-Xiot-MQTT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C0F2FE89F4E339A0A556DB /* Pods_Xiot_MQTT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				169795A320E3AF9400B65A45 /* Xiot-MQTT */,
 				169795A220E3AF9400B65A45 /* Products */,
+				2642C9D5A23FEAACAFC4E779 /* Pods */,
+				EE58DA25EDD5582FB2AF1261 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "Xiot-MQTT";
 			sourceTree = "<group>";
 		};
+		2642C9D5A23FEAACAFC4E779 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A97EA6045038259A0BBCF7E /* Pods-Xiot-MQTT.debug.xcconfig */,
+				FB987B3D92415D0D4C504C0E /* Pods-Xiot-MQTT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE58DA25EDD5582FB2AF1261 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C886D9F9E0FC7D53F3A19423 /* Pods_Xiot_MQTT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 169795B620E3AF9400B65A45 /* Build configuration list for PBXNativeTarget "Xiot-MQTT" */;
 			buildPhases = (
+				C9B1D9C13F68BB8835B4E497 /* [CP] Check Pods Manifest.lock */,
 				1697959D20E3AF9400B65A45 /* Sources */,
 				1697959E20E3AF9400B65A45 /* Frameworks */,
 				1697959F20E3AF9400B65A45 /* Resources */,
+				184DC3BF8879C706ABC2A3FB /* [CP] Embed Pods Frameworks */,
+				C27ACA163F316462DB3C4C41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		184DC3BF8879C706ABC2A3FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Xiot-MQTT/Pods-Xiot-MQTT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyTimer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Xiot-MQTT/Pods-Xiot-MQTT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C27ACA163F316462DB3C4C41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Xiot-MQTT/Pods-Xiot-MQTT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9B1D9C13F68BB8835B4E497 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xiot-MQTT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1697959D20E3AF9400B65A45 /* Sources */ = {
@@ -276,6 +361,7 @@
 		};
 		169795B720E3AF9400B65A45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A97EA6045038259A0BBCF7E /* Pods-Xiot-MQTT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +376,7 @@
 		};
 		169795B820E3AF9400B65A45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB987B3D92415D0D4C504C0E /* Pods-Xiot-MQTT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
